@@ -13,9 +13,23 @@
         </div>
       </div>
       <p>or</p>
-      <form class="inputs-container">
-        <input class="input" type="text" placeholder="Username" />
-        <input class="input" type="text" placeholder="Password" />
+      <form
+        class="inputs-container"
+        [formGroup]="formLogin"
+        (ngSubmit)="login()"
+      >
+        <input
+          class="input"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <input
+          class="input"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
         <p>Forgot password? <span class="span">Click here</span></p>
         <button class="btn">login</button>
         <p>
