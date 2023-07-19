@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ConfigRoutingModule } from './config-routing.module';
-import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { CongifLayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { RolListPageComponent } from './pages/rol-list-page/rol-list-page.component';
 import { RolCreatePageComponent } from './pages/rol-create-page/rol-create-page.component';
 import { RolEditPageComponent } from './pages/rol-edit-page/rol-edit-page.component';
@@ -16,7 +16,7 @@ import { EstadoEditPageComponent } from './pages/estado-edit-page/estado-edit-pa
 
 @NgModule({
   declarations: [
-    LayoutPageComponent,
+    CongifLayoutPageComponent,
     RolListPageComponent,
     RolCreatePageComponent,
     RolEditPageComponent,

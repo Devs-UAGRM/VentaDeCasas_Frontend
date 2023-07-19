@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-layout-page',
+  selector: 'report-layout-page',
   templateUrl: './layout-page.component.html',
   styles: [
   ]
 })
-export class LayoutPageComponent {
+export class ReportLayoutPageComponent {
 
 }

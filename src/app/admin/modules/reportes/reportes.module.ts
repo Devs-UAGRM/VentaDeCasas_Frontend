@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReportesRoutingModule } from './reportes-routing.module';
-import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
+import { ReportLayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { UsuariosListPageComponent } from './pages/usuarios-list-page/usuarios-list-page.component';
 import { UsuariosReportPageComponent } from './pages/usuarios-report-page/usuarios-report-page.component';
 import { VentasListPageComponent } from './pages/ventas-list-page/ventas-list-page.component';
@@ -15,7 +15,7 @@ import { TramiteReportPageComponent } from './pages/tramite-report-page/tramite-
 
 @NgModule({
   declarations: [
-    LayoutPageComponent,
+    ReportLayoutPageComponent,
     UsuariosListPageComponent,
     UsuariosReportPageComponent,
     VentasListPageComponent,
