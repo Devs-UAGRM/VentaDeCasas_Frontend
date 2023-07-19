@@ -1,7 +1,7 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { environment } from '../../environments/environments';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map, of, tap } from 'rxjs';
+import { Observable, catchError, map, of, tap, throwError } from 'rxjs';
 import { User } from '../../interfaces/user.interface';
 import { AuthStatus, LoginResponse } from '../interface';
 
@@ -37,12 +37,13 @@ export class AuthService {
           console.log({ user, token })
         }),
 
-        map(() => true)
+        map(() => true),
 
         // Todo: errores
+        catchError(err => throwError(() => err.error.msg)
+        )
       )
 
-    return of(true)
   }
 
 }
