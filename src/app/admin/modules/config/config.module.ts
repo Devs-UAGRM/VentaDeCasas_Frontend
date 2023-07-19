@@ -12,6 +12,7 @@ import { CategoriaListPageComponent } from './pages/categoria-list-page/categori
 import { EstadoListPageComponent } from './pages/estado-list-page/estado-list-page.component';
 import { EstadoCreatePageComponent } from './pages/estado-create-page/estado-create-page.component';
 import { EstadoEditPageComponent } from './pages/estado-edit-page/estado-edit-page.component';
+import { SidenavComponent } from '../../shared/sidenav-component/sidenav-component.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { EstadoEditPageComponent } from './pages/estado-edit-page/estado-edit-pa
   ],
   imports: [
     CommonModule,
-    ConfigRoutingModule
+    ConfigRoutingModule,
+    SidenavComponent
   ]
 })
 export class ConfigModule { }
