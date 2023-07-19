@@ -21,17 +21,19 @@
         <input
           class="input"
           type="email"
+          formControlName="correo"
           placeholder="Email"
-          formControlName="email"
         />
         <input
           class="input"
           type="password"
-          placeholder="Password"
           formControlName="password"
+          placeholder="Password"
         />
         <p>Forgot password? <span class="span">Click here</span></p>
-        <button class="btn">login</button>
+        <button class="btn" [disabled]="formLogin.invalid" type="submit">
+          login
+        </button>
         <p>
           Don't have an account?
           <span routerLink="/auth/register" class="span">Sign Up</span>
