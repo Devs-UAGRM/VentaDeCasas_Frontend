@@ -55,23 +55,23 @@ export class AuthService {
 
   /// Eliminar
 
-  // getBitacora(): Observable<boolean> {
-  //   const url = `${this.baseUrl}/api/bitacora/2`;
-  //   const token = localStorage.getItem('token');
-  //   if (!token) return of(false);
-  //   const headers = new HttpHeaders()
-  //     .set('token', `${token}`);
-  //   const bitacora = this.http.get<BitacoraInterface>(url, { headers });
-  //   return bitacora
-  //     .pipe(
-  //       map((resp) => {
-  //         console.log({ resp }, "Desde get bitacora")
-  //         return true;
-  //       }),
-  //       catchError(() => {
-  //         return of(false)
-  //       })
-  //     )
-  // }
+  getBitacora(): Observable<boolean> {
+    const url = `${this.baseUrl}/api/bitacora`;
+    const token = localStorage.getItem('token');
+    if (!token) return of(false);
+    const headers = new HttpHeaders()
+      .set('token', `${token}`);
+    const bitacora = this.http.get<BitacoraInterface>(url, { headers });
+    return bitacora
+      .pipe(
+        map((resp) => {
+          console.log({ resp }, "Desde get bitacora")
+          return true;
+        }),
+        catchError(() => {
+          return of(false)
+        })
+      )
+  }
 
 }
