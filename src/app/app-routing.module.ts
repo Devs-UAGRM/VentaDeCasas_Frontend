@@ -6,7 +6,7 @@ import { notAuthenticatedGuardAdmin } from './auth/guards/is-not-authenticated.g
 
 const routes: Routes = [
   {
-    // canActivate: [notAuthenticatedGuardAdmin],
+    canActivate: [notAuthenticatedGuardAdmin],
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },

@@ -20,27 +20,27 @@ import { Router } from '@angular/router';
 export class SidenavComponent {
 
   private authService = inject(AuthService);
-  private router = inject(Router);
+  // private router = inject(Router);
 
   onLogOut() {
     this.authService.logout();
   }
 
-  public authStatusChangedEffect = effect(() => {
-    switch (this.authService.authStatus()) {
+  // public authStatusChangedEffect = effect(() => {
+  //   switch (this.authService.authStatus()) {
 
-      case AuthStatus.checking:
-        return;
+  //     case AuthStatus.checking:
+  //       return;
 
-      case AuthStatus.authenticated:
-        this.router.navigateByUrl('/admin/dashboard');
-        return;
+  //     case AuthStatus.authenticated:
+  //       this.router.navigateByUrl('/admin/dashboard');
+  //       return;
 
-      case AuthStatus.notAuthenticated:
-        this.router.navigateByUrl('/auth/login');
-        return;
+  //     case AuthStatus.notAuthenticated:
+  //       this.router.navigateByUrl('/auth/login');
+  //       return;
 
-    }
-  })
+  //   }
+  // })
 
 }
